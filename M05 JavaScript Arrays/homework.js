@@ -168,20 +168,53 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   
+   
+   const mesesPedidos = ["Enero", "Marzo", "Noviembre"];
+   const mesesEncontrados = [];
+ 
+   for (let i = 0; i < array.length; i++) {
+   
+ 
+     if (mesesPedidos.includes(array[i])) {
+       mesesEncontrados.push(array[i]);
+     }
+   }
+ 
+   if (mesesEncontrados.length === mesesPedidos.length) {
+     return mesesEncontrados;
+   } else {
+     return "No se encontraron los meses pedidos";
+   }
 }
+
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   let resultado= []
+   for(let i=0; i<=60;i++){
+      if(i%6==0){
+         resultado.push(i)
+      }
+   }return resultado;
+
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-}
+   let mayores =[]
 
+   for (let i = 0; i < array.length; i++) {
+      if (array[i]>100){
+         mayores.push(array[i]);
+      }
+
+} return mayores;
+}
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
 -------------------------------------------------------------------------------------*/
